@@ -16,7 +16,7 @@ export function HomePage({ navigate }: { navigate: Navigate }) {
           className="animate-hero-zoom absolute inset-0 h-full w-full object-cover object-[80%_center] sm:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/82 to-ink/35 sm:via-ink/78 sm:to-ink/20" />
-        <div className="container-x relative z-10 flex items-center py-12 sm:min-h-[84vh] sm:py-20">
+        <div className="container-x relative z-10 flex items-center pb-12 pt-28 sm:min-h-[84vh] sm:py-20">
           <Reveal direction="left" className="max-w-3xl">
             <div>
               <h1 className="max-w-3xl font-display text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-7xl">

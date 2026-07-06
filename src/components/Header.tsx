@@ -12,7 +12,7 @@ type HeaderProps = {
 export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) {
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-ink/10 bg-white/94 backdrop-blur">
+      <header className="fixed inset-x-0 top-0 z-50 text-white">
         <div className="container-x flex h-20 items-center justify-between">
           <button
             className="flex items-center gap-3 text-left"
@@ -20,7 +20,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
             aria-label="Go to home"
           >
             <img
-              src="/assets/images/xapn-logo.jpg"
+              src="/assets/images/xapn-navbar.png"
               alt="XAPN Ghana Limited"
               className="h-12 w-auto object-contain"
             />
@@ -32,8 +32,8 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                 key={item.href}
                 className={`rounded-md px-4 py-2 text-sm font-bold transition ${
                   route === item.href
-                    ? "bg-ink text-white"
-                    : "text-steel hover:bg-mist hover:text-ink"
+                    ? "text-white"
+                    : "text-white/80 hover:text-white"
                 }`}
                 onClick={() => navigate(item.href)}
               >
@@ -56,7 +56,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
         {menuOpen && (
           <nav
             id="mobile-navigation-dropdown"
-            className="animate-fade-up absolute inset-x-0 top-full border-t border-ink/10 bg-white px-5 py-4 shadow-soft lg:hidden"
+            className="animate-fade-up absolute inset-x-0 top-full border-t border-white/10 bg-ink/96 px-5 py-4 shadow-soft backdrop-blur lg:hidden"
             aria-label="Mobile navigation"
           >
             <div className="mx-auto flex max-w-7xl flex-col gap-2">
@@ -64,7 +64,9 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                 <button
                   key={item.href}
                   className={`rounded-md px-4 py-3 text-left text-sm font-bold transition ${
-                    route === item.href ? "bg-ink text-white" : "bg-mist text-ink hover:bg-ink/10"
+                    route === item.href
+                      ? "bg-white text-ink"
+                      : "bg-white/10 text-white/80 hover:bg-white/15 hover:text-white"
                   }`}
                   onClick={() => navigate(item.href)}
                 >
@@ -75,7 +77,6 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
           </nav>
         )}
       </header>
-      <div className="h-20" aria-hidden="true" />
     </>
   );
 }

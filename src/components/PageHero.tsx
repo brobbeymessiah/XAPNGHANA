@@ -8,7 +8,7 @@ type PageHeroProps = {
 
 export function PageHero({ eyebrow, title, body }: PageHeroProps) {
   return (
-    <section className="relative isolate overflow-hidden bg-ink py-20 text-white sm:py-24">
+    <section className="relative isolate overflow-hidden bg-ink pb-20 pt-28 text-white sm:pb-24 sm:pt-32">
       <img
         src="/assets/images/hero-procurement.jpg"
         alt=""

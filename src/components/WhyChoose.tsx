@@ -33,7 +33,7 @@ export function WhyChoose() {
           {whyChooseItems.map((item) => (
             <Reveal key={item.title} direction="up" className="h-full">
               <div className="card-motion h-full rounded-lg border border-ink/10 bg-white p-6 shadow-sm">
-                <span className="grid h-12 w-12 place-items-center rounded-md bg-forest text-white">
+                <span className="grid h-12 w-12 place-items-center rounded-md bg-ink text-white">
                   {item.icon}
                 </span>
                 <h3 className="mt-5 font-display text-xl font-bold">{item.title}</h3>
