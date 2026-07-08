@@ -4,17 +4,17 @@ import { contact } from "../data/contact";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-ink py-10">
-      <div className="container-x grid gap-8 lg:grid-cols-[0.8fr_auto_1.2fr] lg:items-start">
-        <div>
+    <footer className="border-t border-white/10 bg-ink pt-8 pb-[calc(2rem+env(safe-area-inset-bottom))] sm:py-10">
+      <div className="container-x grid grid-cols-[5.75rem_minmax(0,1fr)] items-start gap-x-4 gap-y-5 text-left sm:grid-cols-[8rem_minmax(0,1fr)] lg:grid-cols-[0.8fr_auto_1.2fr] lg:gap-8">
+        <div className="col-start-1 row-start-1 flex justify-start lg:col-auto lg:row-auto">
           <img
             src="/assets/images/xapn-footer.png"
             alt="XAPN Ghana Limited"
-            className="h-auto w-40 object-contain"
+            className="h-auto w-24 object-contain sm:w-32 lg:w-40"
           />
         </div>
 
-        <div className="flex flex-col gap-2 lg:items-center" aria-label="Social media links">
+        <div className="col-span-2 row-start-2 flex flex-wrap justify-start gap-2.5 pt-1 lg:col-auto lg:row-auto lg:flex-col lg:items-center lg:pt-0" aria-label="Social media links">
           <SocialLink label="Facebook" href="#">
             <Facebook size={18} />
           </SocialLink>
@@ -29,7 +29,7 @@ export function Footer() {
           </SocialLink>
         </div>
 
-        <div className="flex flex-col gap-3 lg:items-end">
+        <div className="col-start-2 row-start-1 flex w-full min-w-0 flex-col gap-1.5 lg:col-auto lg:row-auto lg:max-w-none lg:items-end lg:gap-3">
           <FooterContact icon={<Phone size={18} />} label="Phone" href={contact.phoneHref}>
             {contact.phone}
           </FooterContact>
@@ -70,11 +70,11 @@ function FooterContact({
 }) {
   const content = (
     <>
-      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-white/10 text-white">
+      <span className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-white/10 text-white sm:h-8 sm:w-8 lg:h-10 lg:w-10">
         {icon}
       </span>
       <span className="min-w-0">
-        <span className="block break-words text-sm font-bold leading-snug text-white/80">
+        <span className="block break-words text-xs font-semibold leading-snug text-white/80 lg:text-sm lg:font-bold">
           {children}
         </span>
       </span>
@@ -82,7 +82,7 @@ function FooterContact({
   );
 
   const className =
-    "flex w-full min-w-0 gap-3 rounded-md p-3 transition lg:max-w-md";
+    "flex w-full min-w-0 items-center gap-2 rounded-md py-0.5 text-left transition sm:gap-2.5 lg:max-w-md lg:gap-3 lg:p-3";
 
   if (href) {
     return (

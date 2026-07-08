@@ -32,8 +32,8 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                 key={item.href}
                 className={`rounded-md px-4 py-2 text-sm font-bold transition ${
                   route === item.href
-                    ? "text-white"
-                    : "text-white/80 hover:text-white"
+                    ? "bg-ink/10 text-ink"
+                    : "text-ink/75 hover:bg-ink/5 hover:text-ink"
                 }`}
                 onClick={() => navigate(item.href)}
               >
@@ -56,7 +56,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
         {menuOpen && (
           <nav
             id="mobile-navigation-dropdown"
-            className="animate-fade-up absolute inset-x-0 top-full border-t border-white/10 bg-ink/96 px-5 py-4 shadow-soft backdrop-blur lg:hidden"
+            className="animate-fade-up absolute inset-x-0 top-full border-t border-ink/10 bg-white/95 px-5 py-4 shadow-soft backdrop-blur lg:hidden"
             aria-label="Mobile navigation"
           >
             <div className="mx-auto flex max-w-7xl flex-col gap-2">
@@ -65,8 +65,8 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                   key={item.href}
                   className={`rounded-md px-4 py-3 text-left text-sm font-bold transition ${
                     route === item.href
-                      ? "bg-white text-ink"
-                      : "bg-white/10 text-white/80 hover:bg-white/15 hover:text-white"
+                      ? "bg-ink/10 text-ink"
+                      : "text-ink/75 hover:bg-ink/5 hover:text-ink"
                   }`}
                   onClick={() => navigate(item.href)}
                 >
