@@ -53,12 +53,12 @@ export function SolutionsPage({ navigate }: { navigate: Navigate }) {
                   <Reveal
                     direction={imageDirection}
                     duration={0.9}
-                    className={`min-h-80 overflow-hidden ${index % 2 ? "lg:order-2" : ""}`}
+                    className={`aspect-[4/3] overflow-hidden sm:aspect-[16/10] lg:aspect-auto lg:min-h-80 ${index % 2 ? "lg:order-2" : ""}`}
                   >
                     <img
                       src={solution.image}
                       alt={solution.title}
-                      className="h-full min-h-80 w-full object-cover transition duration-700 hover:scale-110"
+                      className="h-full w-full object-cover transition duration-700 hover:scale-110"
                     />
                   </Reveal>
 

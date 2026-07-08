@@ -12,7 +12,7 @@ export function PageHero({ eyebrow, title, body }: PageHeroProps) {
       <img
         src="/assets/images/hero-procurement.jpg"
         alt=""
-        className="animate-hero-zoom absolute inset-0 h-full w-full object-cover opacity-25"
+        className="animate-hero-zoom absolute inset-0 h-full w-full object-cover object-[80%_center] opacity-25 sm:object-center"
       />
       <div className="absolute inset-0 bg-ink/78" />
       <div className="container-x relative">
