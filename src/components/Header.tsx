@@ -32,8 +32,8 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                 key={item.href}
                 className={`rounded-md px-4 py-2 text-sm font-bold transition ${
                   route === item.href
-                    ? "bg-brand/15 text-ink"
-                    : "text-ink/75 hover:bg-brand/10 hover:text-ink"
+                    ? "bg-[#F7E5B3]/45 text-ink"
+                    : "text-ink/75 hover:bg-[#F7E5B3]/35 hover:text-ink"
                 }`}
                 onClick={() => navigate(item.href)}
               >
