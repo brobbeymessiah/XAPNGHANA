@@ -43,7 +43,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
           </nav>
 
           <button
-            className="grid place-items-center p-2 text-ink lg:hidden"
+            className="grid place-items-center p-2 text-brand lg:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Close navigation" : "Open navigation"}
             aria-controls="mobile-navigation-dropdown"
