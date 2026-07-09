@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 type PageHeroProps = {
   eyebrow: string;
   title: string;
-  body: string;
+  body?: string;
 };
 
 export function PageHero({ eyebrow, title, body }: PageHeroProps) {
@@ -19,7 +19,7 @@ export function PageHero({ eyebrow, title, body }: PageHeroProps) {
         <Reveal direction="left">
           <p className="eyebrow">{eyebrow}</p>
           <h1 className="mt-4 max-w-4xl font-display text-4xl font-bold leading-tight sm:text-5xl">{title}</h1>
-          <p className="mt-5 max-w-3xl text-base leading-8 text-white/76">{body}</p>
+          {body && <p className="mt-5 max-w-3xl text-base leading-8 text-white/76">{body}</p>}
         </Reveal>
       </div>
     </section>

@@ -10,7 +10,6 @@ export function SolutionsPage({ navigate }: { navigate: Navigate }) {
       <PageHero
         eyebrow="Our Solutions"
         title="Practical supply solutions for every part of your operation."
-        body="Instead of overwhelming visitors with every item at once, the page groups products and services into practical supply areas."
       />
 
       <section className="border-b border-ink/10 bg-white py-8">
