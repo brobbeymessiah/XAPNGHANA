@@ -103,13 +103,13 @@ export function ContactPage() {
               <a
                 key={card.label}
                 href={card.href}
-                className="card-motion animate-scale-in flex gap-4 rounded-lg border border-ink/10 bg-white p-5 shadow-sm hover:border-amber"
+                className="card-motion animate-scale-in flex gap-4 rounded-lg border border-ink/10 bg-white p-5 shadow-sm hover:border-brand"
               >
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-md bg-ink text-white">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-md bg-brand/15 text-brand-dark">
                   {card.icon}
                 </span>
                 <span>
-                  <span className="block text-sm font-bold uppercase tracking-[0.14em] text-steel">
+                  <span className="block text-sm font-bold uppercase tracking-[0.14em] text-black/70">
                     {card.label}
                   </span>
                   <span className="mt-1 block text-base font-bold text-ink">{card.value}</span>
@@ -209,7 +209,7 @@ export function ContactPage() {
                 {state.submitting ? "Sending..." : "Send Enquiry"} <ArrowRight size={18} />
               </button>
               {state.succeeded && (
-                <p className="text-sm font-semibold text-forest">
+                <p className="text-sm font-semibold text-brand-dark">
                   Enquiry sent. XAPN will review your message and respond shortly.
                 </p>
               )}

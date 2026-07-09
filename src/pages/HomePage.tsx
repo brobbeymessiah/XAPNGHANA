@@ -41,7 +41,7 @@ export function HomePage({ navigate }: { navigate: Navigate }) {
             </div>
           </Reveal>
           <Reveal direction="right">
-            <p className="text-base leading-8 text-steel">
+            <p className="text-base leading-8 text-black/75">
               XAPN Ghana Limited helps businesses source essential products and services
               with a focus on quality, timely delivery, and long-term operational value.
             </p>

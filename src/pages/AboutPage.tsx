@@ -32,7 +32,7 @@ export function AboutPage({ navigate }: { navigate: Navigate }) {
             </div>
           </Reveal>
           <Reveal direction="up">
-            <div className="space-y-5 text-base leading-8 text-steel">
+            <div className="space-y-5 text-base leading-8 text-black/75">
               <p>
                 XAPN Ghana Limited is a dynamic solutions provider dedicated to
                 supporting organizations and industries across Ghana. The company focuses on
@@ -75,9 +75,9 @@ export function AboutPage({ navigate }: { navigate: Navigate }) {
             {values.map(([title, body]) => (
               <Reveal key={title} direction="up" className="h-full">
                 <div className="card-motion h-full rounded-lg border border-ink/10 bg-white p-6 shadow-sm">
-                  <CheckCircle2 className="text-forest" size={24} />
-                  <h3 className="mt-4 font-display text-lg font-bold">{title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-steel">{body}</p>
+                  <CheckCircle2 className="text-brand-dark" size={24} />
+                  <h3 className="mt-4 font-display text-lg font-bold text-black">{title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-black/75">{body}</p>
                 </div>
               </Reveal>
             ))}

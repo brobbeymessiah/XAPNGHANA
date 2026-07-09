@@ -5,18 +5,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#18202A",
-        steel: "#5D6978",
-        mist: "#F4F7FA",
-        amber: "#C88A1E",
-        forest: "#236A52",
+        ink: "#001F46",
+        steel: "#274B6C",
+        mist: "#F3FCFF",
+        brand: {
+          DEFAULT: "#17CAF9",
+          dark: "#0B9FCE",
+        },
       },
       boxShadow: {
-        soft: "0 18px 60px rgba(24, 32, 42, 0.12)",
+        soft: "0 18px 60px rgba(0, 31, 70, 0.12)",
       },
       fontFamily: {
-        sans: ["Manrope", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-        display: ["Manrope", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Space Grotesk", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
       },
     },
   },

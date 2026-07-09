@@ -26,7 +26,7 @@ export function SolutionsPage({ navigate }: { navigate: Navigate }) {
                   <a
                     key={`${group}-${solution.id}`}
                     href={`#${solution.id}`}
-                    className="shrink-0 rounded-md border border-ink/10 bg-mist px-4 py-3 text-sm font-bold text-ink transition hover:border-amber hover:text-amber"
+                    className="shrink-0 rounded-md border border-ink/10 bg-mist px-4 py-3 text-sm font-bold text-ink transition hover:border-brand hover:text-brand-dark"
                   >
                     {solution.title}
                   </a>
@@ -65,14 +65,14 @@ export function SolutionsPage({ navigate }: { navigate: Navigate }) {
                   <Reveal direction={contentDirection} duration={0.9} className="h-full">
                     <div className="p-6 sm:p-8 lg:p-10">
                       <h2 className="mt-3 font-display text-2xl font-bold leading-tight sm:text-3xl">{solution.title}</h2>
-                      <p className="mt-4 text-base leading-8 text-steel">{solution.summary}</p>
+                      <p className="mt-4 text-base leading-8 text-black/75">{solution.summary}</p>
                       <div className="mt-7 grid gap-3 sm:grid-cols-2">
                         {solution.items.map((item) => (
                           <div
                             key={item}
                             className="flex gap-3 rounded-md bg-mist p-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:bg-white hover:shadow-sm"
                           >
-                            <CheckCircle2 className="mt-0.5 shrink-0 text-forest" size={17} />
+                            <CheckCircle2 className="mt-0.5 shrink-0 text-brand-dark" size={17} />
                             <span>{item}</span>
                           </div>
                         ))}

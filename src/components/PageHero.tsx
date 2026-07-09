@@ -12,10 +12,10 @@ export function PageHero({ eyebrow, title, body }: PageHeroProps) {
       <img
         src="/assets/images/hero-procurement.jpg"
         alt=""
-        className="animate-hero-zoom absolute inset-0 h-full w-full object-cover object-[80%_center] opacity-25 sm:object-center"
+        className="animate-hero-zoom absolute inset-0 h-full w-full object-cover object-[80%_center] sm:object-center"
       />
-      <div className="absolute inset-0 bg-ink/78" />
-      <div className="container-x relative">
+      <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/60 to-ink/20 sm:via-ink/62 sm:to-ink/10" />
+      <div className="container-x relative z-10">
         <Reveal direction="left">
           <p className="eyebrow">{eyebrow}</p>
           <h1 className="mt-4 max-w-4xl font-display text-4xl font-bold leading-tight sm:text-5xl">{title}</h1>
