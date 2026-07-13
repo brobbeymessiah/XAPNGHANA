@@ -19,7 +19,7 @@ export function HomePage({ navigate }: { navigate: Navigate }) {
         <div className="container-x relative z-10 flex items-center pb-12 pt-28 sm:min-h-[84vh] sm:py-20">
           <Reveal direction="up" className="max-w-3xl">
             <div>
-              <h1 className="max-w-3xl font-display text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-7xl">
+              <h1 className="max-w-3xl font-display text-4xl font-bold leading-[1.08] sm:text-5xl md:text-6xl lg:text-7xl">
                 Your Trusted Partner in Industrial Solutions & Supplies
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-8 text-white/82 sm:text-lg">
@@ -31,7 +31,7 @@ export function HomePage({ navigate }: { navigate: Navigate }) {
       </section>
 
       <section className="section-pad bg-white">
-        <div className="container-x grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+        <div className="container-x grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-end lg:grid-cols-[0.85fr_1.15fr]">
           <Reveal direction="left">
             <div>
               <p className="eyebrow">What We Do</p>
@@ -58,7 +58,7 @@ export function HomePage({ navigate }: { navigate: Navigate }) {
               body="The website presents solution categories first, then supporting items inside each category."
             />
           </Reveal>
-          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {solutions.map((solution) => (
               <Reveal key={solution.id} direction="up" className="h-full">
                 <SolutionCard solution={solution} navigate={navigate} />

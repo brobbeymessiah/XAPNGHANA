@@ -22,7 +22,7 @@ export function AboutPage({ navigate }: { navigate: Navigate }) {
       />
 
       <section className="section-pad bg-white">
-        <div className="container-x grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+        <div className="container-x grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-start">
           <Reveal direction="up">
             <div>
               <p className="eyebrow">Company Overview</p>
@@ -71,7 +71,7 @@ export function AboutPage({ navigate }: { navigate: Navigate }) {
             title="The standards behind every supply relationship."
             body="The site presents XAPN as practical, dependable, and built for repeat business relationships."
           />
-          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {values.map(([title, body]) => (
               <Reveal key={title} direction="up" className="h-full">
                 <div className="card-motion h-full rounded-lg border border-ink/10 bg-white p-6 shadow-sm">

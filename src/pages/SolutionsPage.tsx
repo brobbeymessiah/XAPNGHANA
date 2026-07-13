@@ -1,10 +1,30 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { useEffect, useRef } from "react";
 import { PageHero } from "../components/PageHero";
 import { Reveal } from "../components/Reveal";
 import { solutions } from "../data/solutions";
 import type { Navigate } from "../types/navigation";
 
 export function SolutionsPage({ navigate }: { navigate: Navigate }) {
+  const categoryNavRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const resetCategoryScroll = () => {
+      if (categoryNavRef.current) {
+        categoryNavRef.current.scrollLeft = 0;
+      }
+    };
+
+    resetCategoryScroll();
+    const frame = window.requestAnimationFrame(resetCategoryScroll);
+    window.addEventListener("pageshow", resetCategoryScroll);
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener("pageshow", resetCategoryScroll);
+    };
+  }, []);
+
   return (
     <>
       <PageHero
@@ -12,27 +32,33 @@ export function SolutionsPage({ navigate }: { navigate: Navigate }) {
         title="Practical supply solutions for every part of your operation."
       />
 
-      <section className="border-b border-ink/10 bg-white py-8">
-        <div className="container-x animate-fade-up overflow-hidden">
-          <div className="solution-crawler flex w-max">
-            {[0, 1].map((group) => (
-              <div
-                key={group}
-                className="flex shrink-0 gap-3 pr-3"
-                aria-hidden={group === 1 ? true : undefined}
-              >
-                {solutions.map((solution) => (
-                  <a
-                    key={`${group}-${solution.id}`}
-                    href={`#${solution.id}`}
-                    className="shrink-0 rounded-md border border-ink/10 bg-mist px-4 py-3 text-sm font-bold text-ink transition hover:border-brand hover:text-brand-dark"
-                  >
-                    {solution.title}
-                  </a>
-                ))}
-              </div>
-            ))}
-          </div>
+      <section className="overflow-x-hidden border-b border-ink/10 bg-white py-8">
+        <div className="container-x animate-fade-up min-w-0">
+          <nav
+            ref={categoryNavRef}
+            className="solution-crawler-viewport"
+            aria-label="Service categories"
+          >
+            <div className="solution-crawler flex w-max">
+              {[0, 1].map((group) => (
+                <div
+                  key={group}
+                  className={`${group === 1 ? "hidden md:flex" : "flex"} shrink-0 gap-3 pr-3`}
+                  aria-hidden={group === 1 ? true : undefined}
+                >
+                  {solutions.map((solution) => (
+                    <a
+                      key={`${group}-${solution.id}`}
+                      href={`#${solution.id}`}
+                      className="shrink-0 rounded-md border border-ink/10 bg-mist px-4 py-3 text-sm font-bold text-ink transition hover:border-brand hover:text-brand-dark"
+                    >
+                      {solution.title}
+                    </a>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </nav>
         </div>
       </section>
 

@@ -98,7 +98,7 @@ export function ContactPage() {
 
       <section className="section-pad bg-mist">
         <div className="container-x grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="space-y-5">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-1">
             {contactCards.map((card) => (
               <a
                 key={card.label}

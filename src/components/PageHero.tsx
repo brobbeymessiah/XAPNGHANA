@@ -18,8 +18,8 @@ export function PageHero({ eyebrow, title, body }: PageHeroProps) {
       <div className="container-x relative z-10">
         <Reveal direction="left">
           <p className="eyebrow">{eyebrow}</p>
-          <h1 className="mt-4 max-w-4xl font-display text-4xl font-bold leading-tight sm:text-5xl">{title}</h1>
-          {body && <p className="mt-5 max-w-3xl text-base leading-8 text-white/76">{body}</p>}
+          <h1 className="mt-4 max-w-4xl font-display text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">{title}</h1>
+          {body && <p className="mt-5 max-w-3xl text-base leading-8 text-white/76 md:text-lg">{body}</p>}
         </Reveal>
       </div>
     </section>

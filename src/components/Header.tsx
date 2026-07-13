@@ -53,8 +53,11 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                 <div
                   key={item.href}
                   className="relative"
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Escape") {
+                      setServicesOpen(false);
+                    }
+                  }}
                 >
                   <button
                     type="button"
@@ -66,6 +69,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                     onClick={() => setServicesOpen((open) => !open)}
                     aria-expanded={servicesOpen}
                     aria-haspopup="menu"
+                    aria-controls="desktop-services-menu"
                   >
                     {item.label}
                     <ChevronDown
@@ -75,7 +79,10 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                   </button>
 
                   {servicesOpen && (
-                    <div className="fixed left-1/2 top-20 z-50 w-[min(72rem,calc(100vw-2rem))] -translate-x-1/2 overflow-hidden rounded-lg border border-ink/10 bg-white text-ink shadow-soft">
+                    <div
+                      id="desktop-services-menu"
+                      className="fixed left-1/2 top-20 z-50 w-[min(72rem,calc(100vw-2rem))] -translate-x-1/2 overflow-hidden rounded-lg border border-ink/10 bg-white text-ink shadow-soft"
+                    >
                       <div className="flex items-center justify-between border-b border-ink/10 px-5 py-3">
                         <p className="text-sm font-black uppercase text-ink">Services</p>
                         <button
@@ -181,7 +188,15 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
             <div className="mx-auto flex max-h-[calc(100vh-7rem)] max-w-7xl flex-col gap-2 overflow-y-auto">
               {navItems.map((item) =>
                 item.href === "/our-solutions" ? (
-                  <div key={item.href} className="rounded-md bg-brand/5 p-1">
+                  <div
+                    key={item.href}
+                    className="rounded-md bg-brand/5 p-1"
+                    onKeyDown={(event) => {
+                      if (event.key === "Escape") {
+                        setServicesOpen(false);
+                      }
+                    }}
+                  >
                     <button
                       type="button"
                       className={`flex w-full items-center justify-between rounded-md px-3 py-3 text-left text-sm font-bold transition ${
@@ -189,6 +204,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                       }`}
                       onClick={() => setServicesOpen((open) => !open)}
                       aria-expanded={servicesOpen}
+                      aria-controls="mobile-services-menu"
                     >
                       {item.label}
                       <ChevronDown
@@ -198,7 +214,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                     </button>
 
                     {servicesOpen && (
-                      <div className="grid gap-2 px-1 pb-1 pt-2">
+                      <div id="mobile-services-menu" className="grid gap-2 px-1 pb-1 pt-2">
                         <button
                           type="button"
                           className="rounded-md px-3 py-2 text-left text-sm font-bold text-ink hover:bg-white"
