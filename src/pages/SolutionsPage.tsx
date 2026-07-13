@@ -29,7 +29,7 @@ export function SolutionsPage({ navigate }: { navigate: Navigate }) {
     <>
       <PageHero
         eyebrow="Our Services"
-        title="Practical supply solutions for every part of your operation."
+        title="Supply and service solutions for every aspect of your operations."
       />
 
       <section className="overflow-x-hidden border-b border-ink/10 bg-white py-8">
