@@ -3,7 +3,7 @@ import type { Route } from "../types/navigation";
 export const navItems: { label: string; href: Route }[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Our Solutions", href: "/our-solutions" },
+  { label: "Services", href: "/our-solutions" },
   { label: "Contact", href: "/contact" },
 ];
 

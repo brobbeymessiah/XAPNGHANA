@@ -4,6 +4,10 @@ export type Solution = {
   summary: string;
   image: string;
   items: string[];
+  showcaseItems: {
+    title: string;
+    image: string;
+  }[];
 };
 
 export const solutions: Solution[] = [
@@ -20,6 +24,28 @@ export const solutions: Solution[] = [
       "Cabinets, shelving, and filing units",
       "Reception and office support furniture",
     ],
+    showcaseItems: [
+      {
+        title: "Ergonomic Office Chairs",
+        image: "/assets/images/furniture-ergonomic-chairs.jpg",
+      },
+      {
+        title: "Executive & Standard Desks",
+        image: "/assets/images/furniture-desks.jpg",
+      },
+      {
+        title: "Workstations & Conference Tables",
+        image: "/assets/images/furniture-workstations-conference.jpg",
+      },
+      {
+        title: "Cabinets, Shelving & Filing Units",
+        image: "/assets/images/furniture-cabinets-shelving.jpg",
+      },
+      {
+        title: "Reception & Office Support Furniture",
+        image: "/assets/images/furniture-reception-support.jpg",
+      },
+    ],
   },
   {
     id: "tyres-batteries",
@@ -33,6 +59,28 @@ export const solutions: Solution[] = [
       "Heavy-duty and industrial tyres",
       "Car batteries",
       "Truck and fleet batteries",
+    ],
+    showcaseItems: [
+      {
+        title: "Car Tyres",
+        image: "/assets/images/tyres-car-tyres.jpg",
+      },
+      {
+        title: "Truck Tyres",
+        image: "/assets/images/tyres-truck-tyres.jpg",
+      },
+      {
+        title: "Heavy-duty & Industrial Tyres",
+        image: "/assets/images/tyres-heavy-duty-tyres.jpg",
+      },
+      {
+        title: "Car Batteries",
+        image: "/assets/images/tyres-car-batteries.jpg",
+      },
+      {
+        title: "Truck & Fleet Batteries",
+        image: "/assets/images/tyres-fleet-batteries.jpg",
+      },
     ],
   },
   {
@@ -48,6 +96,28 @@ export const solutions: Solution[] = [
       "Filters, belts, and bearings",
       "Electrical and maintenance parts",
     ],
+    showcaseItems: [
+      {
+        title: "Car Spare Parts",
+        image: "/assets/images/spares-car-parts.jpg",
+      },
+      {
+        title: "Truck Spare Parts",
+        image: "/assets/images/spares-truck-parts.jpg",
+      },
+      {
+        title: "Heavy Equipment Parts",
+        image: "/assets/images/spares-heavy-equipment.jpg",
+      },
+      {
+        title: "Filters, Belts & Bearings",
+        image: "/assets/images/spares-filters-belts-bearings.jpg",
+      },
+      {
+        title: "Electrical & Maintenance Parts",
+        image: "/assets/images/spares-electrical-maintenance.jpg",
+      },
+    ],
   },
   {
     id: "storage-pallets",
@@ -61,6 +131,28 @@ export const solutions: Solution[] = [
       "Storage crates",
       "Warehouse racks",
       "Shelving systems and handling tools",
+    ],
+    showcaseItems: [
+      {
+        title: "Wooden Pallets",
+        image: "/assets/images/storage-wooden-pallets.jpg",
+      },
+      {
+        title: "Plastic Pallets",
+        image: "/assets/images/storage-plastic-pallets.jpg",
+      },
+      {
+        title: "Storage Crates",
+        image: "/assets/images/storage-crates.jpg",
+      },
+      {
+        title: "Warehouse Racks",
+        image: "/assets/images/storage-warehouse-racks.jpg",
+      },
+      {
+        title: "Shelving Systems & Handling Tools",
+        image: "/assets/images/storage-shelving-handling.jpg",
+      },
     ],
   },
   {
@@ -76,6 +168,28 @@ export const solutions: Solution[] = [
       "Maintenance tools and supplies",
       "Industrial protection supplies",
     ],
+    showcaseItems: [
+      {
+        title: "Anti-rust Treatment",
+        image: "/assets/images/maintenance-anti-rust.jpg",
+      },
+      {
+        title: "Protective Coatings",
+        image: "/assets/images/maintenance-protective-coatings.jpg",
+      },
+      {
+        title: "Surface Preparation",
+        image: "/assets/images/maintenance-surface-prep.jpg",
+      },
+      {
+        title: "Maintenance Tools & Supplies",
+        image: "/assets/images/maintenance-tools-supplies.jpg",
+      },
+      {
+        title: "Industrial Protection Supplies",
+        image: "/assets/images/maintenance-protection-supplies.jpg",
+      },
+    ],
   },
   {
     id: "general-supplies",
@@ -89,6 +203,28 @@ export const solutions: Solution[] = [
       "Safety supplies",
       "Cleaning and maintenance supplies",
       "Operational support items",
+    ],
+    showcaseItems: [
+      {
+        title: "Office Consumables",
+        image: "/assets/images/general-office-consumables.jpg",
+      },
+      {
+        title: "Industrial Tools",
+        image: "/assets/images/general-industrial-tools.jpg",
+      },
+      {
+        title: "Safety Supplies",
+        image: "/assets/images/general-safety-supplies.jpg",
+      },
+      {
+        title: "Cleaning & Maintenance Supplies",
+        image: "/assets/images/general-cleaning-maintenance.jpg",
+      },
+      {
+        title: "Operational Support Items",
+        image: "/assets/images/general-operational-support.jpg",
+      },
     ],
   },
 ];

@@ -36,7 +36,7 @@ export function HomePage({ navigate }: { navigate: Navigate }) {
             <div>
               <p className="eyebrow">What We Do</p>
               <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-4xl">
-                Reliable supply support for offices, fleets, warehouses, and operations teams.
+                Reliable supply support for offices, fleets, warehouses, and operation teams.
               </h2>
             </div>
           </Reveal>
