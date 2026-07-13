@@ -20,7 +20,7 @@ export function HomePage({ navigate }: { navigate: Navigate }) {
           <Reveal direction="up" className="max-w-3xl">
             <div>
               <h1 className="max-w-3xl font-display text-4xl font-bold leading-[1.08] sm:text-5xl md:text-6xl lg:text-7xl">
-                Your Trusted Partner in Industrial Solutions & Supplies
+                Your Trusted Partner For Industrial Solutions & Supplies
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-8 text-white/82 sm:text-lg">
                 Supplying the essentials that keep business moving.
@@ -36,7 +36,7 @@ export function HomePage({ navigate }: { navigate: Navigate }) {
             <div>
               <p className="eyebrow">What We Do</p>
               <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-4xl">
-                Reliable supply support for offices, fleets, warehouses, and operation teams.
+                Reliable supply and service  support for industrial operations.
               </h2>
             </div>
           </Reveal>
@@ -54,7 +54,7 @@ export function HomePage({ navigate }: { navigate: Navigate }) {
           <Reveal direction="left">
             <SectionHeading
               eyebrow="Our Solutions"
-              title="Grouped clearly, so clients find what they need fast."
+              title=""
               body="The website presents solution categories first, then supporting items inside each category."
             />
           </Reveal>
