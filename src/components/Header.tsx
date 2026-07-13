@@ -16,6 +16,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
   const [activeServiceId, setActiveServiceId] = useState(solutions[0].id);
   const [mobileServiceId, setMobileServiceId] = useState<string | null>(null);
   const isServicesActive = route === "/our-solutions";
+  const isServicesHighlighted = isServicesActive || servicesOpen;
   const activeService =
     solutions.find((solution) => solution.id === activeServiceId) ?? solutions[0];
 
@@ -62,7 +63,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                   <button
                     type="button"
                     className={`inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-bold transition ${
-                      isServicesActive
+                      isServicesHighlighted
                         ? "bg-[#F7E5B3]/45 text-ink"
                         : "text-ink/75 hover:bg-[#F7E5B3]/35 hover:text-ink"
                     }`}
@@ -156,7 +157,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                 <button
                   key={item.href}
                   className={`rounded-md px-4 py-2 text-sm font-bold transition ${
-                    route === item.href
+                    route === item.href && !servicesOpen
                       ? "bg-[#F7E5B3]/45 text-ink"
                       : "text-ink/75 hover:bg-[#F7E5B3]/35 hover:text-ink"
                   }`}
@@ -200,7 +201,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                     <button
                       type="button"
                       className={`flex w-full items-center justify-between rounded-md px-3 py-3 text-left text-sm font-bold transition ${
-                        isServicesActive ? "bg-brand/15 text-ink" : "text-ink/75"
+                        isServicesHighlighted ? "bg-brand/15 text-ink" : "text-ink/75"
                       }`}
                       onClick={() => setServicesOpen((open) => !open)}
                       aria-expanded={servicesOpen}
@@ -271,7 +272,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                   <button
                     key={item.href}
                     className={`rounded-md px-4 py-3 text-left text-sm font-bold transition ${
-                      route === item.href
+                      route === item.href && !servicesOpen
                         ? "bg-brand/15 text-ink"
                         : "text-ink/75 hover:bg-brand/10 hover:text-ink"
                     }`}
