@@ -8,7 +8,7 @@ export function SolutionsPage({ navigate }: { navigate: Navigate }) {
   return (
     <>
       <PageHero
-        eyebrow="Our Solutions"
+        eyebrow="Our Services"
         title="Practical supply solutions for every part of your operation."
       />
 
