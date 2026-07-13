@@ -18,11 +18,8 @@ export function Footer() {
           <SocialLink label="Facebook" href="#">
             <Facebook size={18} />
           </SocialLink>
-          <SocialLink label="Instagram" href="#">
+          <SocialLink label="Instagram" href="https://www.instagram.com/xapnghana?igsh=MWZhajJraXYzbTYwdw%3D%3D&utm_source=qr">
             <Instagram size={18} />
-          </SocialLink>
-          <SocialLink label="LinkedIn" href="#">
-            <Linkedin size={18} />
           </SocialLink>
           <SocialLink label="TikTok" href="#">
             <TikTokIcon />
