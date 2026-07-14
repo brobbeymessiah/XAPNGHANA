@@ -35,16 +35,6 @@ img {
   background: rgba(23, 202, 249, 0.28);
 }
 
-@keyframes solution-crawler {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
-
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -132,21 +122,9 @@ img {
     display: none;
   }
 
-  .solution-crawler {
-    animation: none;
-  }
-
   @media (min-width: 768px) {
     .solution-crawler-viewport {
-      overflow-x: hidden;
-    }
-
-    .solution-crawler {
-      animation: solution-crawler 28s linear infinite;
-    }
-
-    .solution-crawler:hover {
-      animation-play-state: paused;
+      overflow-x: visible;
     }
   }
 
@@ -255,7 +233,6 @@ img {
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .solution-crawler,
     .animate-fade-up,
     .animate-fade-in,
     .animate-scale-in,

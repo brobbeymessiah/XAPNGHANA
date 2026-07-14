@@ -39,23 +39,15 @@ export function SolutionsPage({ navigate }: { navigate: Navigate }) {
             className="solution-crawler-viewport"
             aria-label="Service categories"
           >
-            <div className="solution-crawler flex w-max">
-              {[0, 1].map((group) => (
-                <div
-                  key={group}
-                  className={`${group === 1 ? "hidden md:flex" : "flex"} shrink-0 gap-3 pr-3`}
-                  aria-hidden={group === 1 ? true : undefined}
+            <div className="flex w-max gap-3 md:w-full md:flex-wrap">
+              {solutions.map((solution) => (
+                <a
+                  key={solution.id}
+                  href={`#${solution.id}`}
+                  className="shrink-0 rounded-md border border-ink/10 bg-mist px-4 py-3 text-sm font-bold text-ink transition hover:border-brand hover:text-brand-dark"
                 >
-                  {solutions.map((solution) => (
-                    <a
-                      key={`${group}-${solution.id}`}
-                      href={`#${solution.id}`}
-                      className="shrink-0 rounded-md border border-ink/10 bg-mist px-4 py-3 text-sm font-bold text-ink transition hover:border-brand hover:text-brand-dark"
-                    >
-                      {solution.title}
-                    </a>
-                  ))}
-                </div>
+                  {solution.title}
+                </a>
               ))}
             </div>
           </nav>
