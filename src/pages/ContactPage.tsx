@@ -1,6 +1,6 @@
 import { useForm, ValidationError } from "@formspree/react";
 import { ArrowRight, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { PageHero } from "../components/PageHero";
 import { contact } from "../data/contact";
 import { solutions } from "../data/solutions";
@@ -37,6 +37,14 @@ function fieldClass(hasError: boolean) {
 export function ContactPage() {
   const [state, submitToFormspree, resetFormspree] = useForm<ContactFormValues>("xeebdqaj");
   const [errors, setErrors] = useState<FormErrors>({});
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (state.succeeded) {
+      formRef.current?.reset();
+      setErrors({});
+    }
+  }, [state.succeeded]);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -119,6 +127,7 @@ export function ContactPage() {
           </div>
 
           <form
+            ref={formRef}
             onSubmit={handleSubmit}
             noValidate
             className="animate-fade-up rounded-lg border border-ink/10 bg-white p-6 shadow-soft sm:p-8"
