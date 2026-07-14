@@ -55,7 +55,6 @@ export function HomePage({ navigate }: { navigate: Navigate }) {
             <SectionHeading
               eyebrow="Our Solutions"
               title=""
-              body="The website presents solution categories first, then supporting items inside each category."
             />
           </Reveal>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

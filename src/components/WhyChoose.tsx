@@ -27,7 +27,6 @@ export function WhyChoose() {
         <SectionHeading
           eyebrow="Why Choose XAPN"
           title="A practical partner for business continuity."
-          body="The website keeps the pitch focused on reliability, quality, and fast enquiry action."
         />
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {whyChooseItems.map((item) => (
