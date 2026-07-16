@@ -110,7 +110,7 @@ img {
 }
 
 @layer utilities {
-  .solution-crawler-viewport {
+  .service-crawler-viewport {
     max-width: 100%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
@@ -118,14 +118,8 @@ img {
     -webkit-overflow-scrolling: touch;
   }
 
-  .solution-crawler-viewport::-webkit-scrollbar {
+  .service-crawler-viewport::-webkit-scrollbar {
     display: none;
-  }
-
-  @media (min-width: 768px) {
-    .solution-crawler-viewport {
-      overflow-x: visible;
-    }
   }
 
   .animate-fade-up {
