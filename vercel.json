@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/our-solutions",
+      "destination": "/our-services",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/((?!assets/).*)",
