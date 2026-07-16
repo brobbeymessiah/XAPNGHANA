@@ -3,14 +3,14 @@ import { ArrowRight, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { PageHero } from "../components/PageHero";
 import { contact } from "../data/contact";
-import { solutions } from "../data/solutions";
+import { services } from "../data/services";
 
 type ContactFormValues = {
   name: string;
   company: string;
   phone: string;
   email: string;
-  solution: string;
+  service: string;
   location: string;
   quantity: string;
   message: string;
@@ -91,7 +91,7 @@ export function ContactPage() {
       { icon: <Phone size={22} />, label: "Phone", value: contact.phone, href: contact.phoneHref },
       { icon: <MessageCircle size={22} />, label: "WhatsApp", value: "Chat on WhatsApp", href: contact.whatsappHref },
       { icon: <Mail size={22} />, label: "Email", value: contact.email, href: contact.emailHref },
-      { icon: <MapPin size={22} />, label: "Location", value: contact.location, href: "#" },
+      { icon: <MapPin size={22} />, label: "Location", value: contact.location, href: contact.locationHref },
     ],
     [],
   );
@@ -183,13 +183,13 @@ export function ContactPage() {
                   className="mt-2 text-xs font-semibold text-red-600"
                 />
               </div>
-              <select className="field" name="solution" defaultValue="">
+              <select className="field" name="service" defaultValue="">
                 <option value="" disabled>
-                  Select solution area
+                  Select service area
                 </option>
-                {solutions.map((solution) => (
-                  <option key={solution.id} value={solution.title}>
-                    {solution.title}
+                {services.map((service) => (
+                  <option key={service.id} value={service.title}>
+                    {service.title}
                   </option>
                 ))}
               </select>
