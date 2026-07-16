@@ -20,7 +20,7 @@ export function Footer() {
           <FooterContact icon={<Mail size={18} />} label="Email" href={contact.emailHref}>
             {contact.email}
           </FooterContact>
-          <FooterContact icon={<MapPin size={18} />} label="Location">
+          <FooterContact icon={<MapPin size={18} />} label="Location" href={contact.locationHref}>
             {contact.location}
           </FooterContact>
         </div>
