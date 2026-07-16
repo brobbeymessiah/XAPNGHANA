@@ -8,7 +8,7 @@ import type { Navigate } from "../types/navigation";
 const values = [
   ["Reliability", "Consistent response and timely supply support."],
   ["Quality Assurance", "Products sourced with care from trusted channels."],
-  ["Customer Focus", "Solutions shaped around each client's operational need."],
+  ["Customer Focus", "Services shaped around each client's operational needs."],
   ["Operational Understanding", "A practical view of downtime, delivery, and business continuity."],
 ];
 
@@ -27,20 +27,20 @@ export function AboutPage({ navigate }: { navigate: Navigate }) {
             <div>
               <p className="eyebrow">Company Overview</p>
               <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-4xl">
-                Industrial, office, vehicle, storage, and maintenance solutions under one roof.
+                Industrial, office, vehicle, storage, and maintenance services under one roof.
               </h2>
             </div>
           </Reveal>
           <Reveal direction="up">
             <div className="space-y-5 text-base leading-8 text-black/75">
               <p>
-                XAPN Ghana Limited is a dynamic solutions provider dedicated to
+                XAPN Ghana Limited is a dynamic services provider dedicated to
                 supporting organizations and industries across Ghana. The company focuses on
                 quality, efficiency, and customer satisfaction.
               </p>
               <p>
                 The goal is simple: become the preferred partner for companies seeking
-                dependable supply solutions, operational support, and long-lasting value.
+                dependable supply services, operational support, and long-lasting value.
               </p>
             </div>
           </Reveal>
@@ -57,7 +57,7 @@ export function AboutPage({ navigate }: { navigate: Navigate }) {
           </Reveal>
           <Reveal direction="up" className="h-full">
             <InfoPanel title="Our Vision">
-              To become a leading provider of industrial and organizational solutions in Ghana,
+              To become a leading provider of industrial and operational services in Ghana,
               recognized for excellence, innovation, and customer satisfaction.
             </InfoPanel>
           </Reveal>

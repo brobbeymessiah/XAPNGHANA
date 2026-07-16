@@ -1,7 +1,6 @@
 import { Reveal } from "../components/Reveal";
 import { SectionHeading } from "../components/SectionHeading";
 import { ServiceCard } from "../components/ServiceCard";
-import { Stat } from "../components/Stat";
 import { WhyChoose } from "../components/WhyChoose";
 import { services } from "../data/services";
 import type { Navigate } from "../types/navigation";
