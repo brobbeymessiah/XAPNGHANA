@@ -174,8 +174,8 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                     type="button"
                     className={`inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-bold transition ${
                       isDesktopServicesHighlighted
-                        ? "bg-[#F7E5B3]/45 text-ink"
-                        : "text-ink/75 hover:bg-[#F7E5B3]/35 hover:text-ink"
+                        ? "text-brand-dark"
+                        : "text-brand hover:text-brand-dark"
                     }`}
                     onClick={() => setDesktopServicesOpen((open) => !open)}
                     aria-expanded={desktopServicesOpen}
@@ -277,8 +277,8 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                   aria-current={route === item.href ? "page" : undefined}
                   className={`rounded-md px-4 py-2 text-sm font-bold transition ${
                     route === item.href && !desktopServicesOpen
-                      ? "bg-[#F7E5B3]/45 text-ink"
-                      : "text-ink/75 hover:bg-[#F7E5B3]/35 hover:text-ink"
+                      ? "text-brand-dark"
+                      : "text-brand hover:text-brand-dark"
                   }`}
                 >
                   {item.label}
