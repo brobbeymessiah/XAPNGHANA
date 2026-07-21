@@ -18,10 +18,13 @@ export function ServicesPage({ navigate }: { navigate: Navigate }) {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let animationFrame = 0;
     let lastTimestamp: number | null = null;
+    let scrollPosition = 0;
     let paused = false;
+    let resumeTimeout = 0;
 
     const resetCategoryScroll = () => {
       viewport.scrollLeft = 0;
+      scrollPosition = 0;
       lastTimestamp = null;
     };
 
@@ -33,11 +36,13 @@ export function ServicesPage({ navigate }: { navigate: Navigate }) {
         const groupWidth = categoryGroupRef.current?.offsetWidth ?? 0;
 
         if (groupWidth > 0) {
-          viewport.scrollLeft += elapsed * 0.028;
+          scrollPosition += elapsed * 0.028;
 
-          if (viewport.scrollLeft >= groupWidth) {
-            viewport.scrollLeft %= groupWidth;
+          if (scrollPosition >= groupWidth) {
+            scrollPosition %= groupWidth;
           }
+
+          viewport.scrollLeft = scrollPosition;
         }
       }
 
@@ -45,31 +50,50 @@ export function ServicesPage({ navigate }: { navigate: Navigate }) {
     };
 
     const pauseCrawl = () => {
+      window.clearTimeout(resumeTimeout);
       paused = true;
+      scrollPosition = viewport.scrollLeft;
     };
 
     const resumeCrawl = () => {
+      scrollPosition = viewport.scrollLeft;
       paused = false;
       lastTimestamp = null;
+    };
+
+    const resumeAfterTouch = () => {
+      window.clearTimeout(resumeTimeout);
+      resumeTimeout = window.setTimeout(resumeCrawl, 550);
+    };
+
+    const pauseOnPointerEnter = (event: PointerEvent) => {
+      if (event.pointerType === "mouse") pauseCrawl();
+    };
+
+    const resumeOnPointerLeave = (event: PointerEvent) => {
+      if (event.pointerType === "mouse") resumeCrawl();
     };
 
     resetCategoryScroll();
     animationFrame = window.requestAnimationFrame(crawl);
     window.addEventListener("pageshow", resetCategoryScroll);
-    viewport.addEventListener("pointerenter", pauseCrawl);
-    viewport.addEventListener("pointerleave", resumeCrawl);
+    viewport.addEventListener("pointerenter", pauseOnPointerEnter);
+    viewport.addEventListener("pointerleave", resumeOnPointerLeave);
     viewport.addEventListener("touchstart", pauseCrawl, { passive: true });
-    viewport.addEventListener("touchend", resumeCrawl);
+    viewport.addEventListener("touchend", resumeAfterTouch);
+    viewport.addEventListener("touchcancel", resumeAfterTouch);
     viewport.addEventListener("focusin", pauseCrawl);
     viewport.addEventListener("focusout", resumeCrawl);
 
     return () => {
       window.cancelAnimationFrame(animationFrame);
+      window.clearTimeout(resumeTimeout);
       window.removeEventListener("pageshow", resetCategoryScroll);
-      viewport.removeEventListener("pointerenter", pauseCrawl);
-      viewport.removeEventListener("pointerleave", resumeCrawl);
+      viewport.removeEventListener("pointerenter", pauseOnPointerEnter);
+      viewport.removeEventListener("pointerleave", resumeOnPointerLeave);
       viewport.removeEventListener("touchstart", pauseCrawl);
-      viewport.removeEventListener("touchend", resumeCrawl);
+      viewport.removeEventListener("touchend", resumeAfterTouch);
+      viewport.removeEventListener("touchcancel", resumeAfterTouch);
       viewport.removeEventListener("focusin", pauseCrawl);
       viewport.removeEventListener("focusout", resumeCrawl);
     };
