@@ -3,7 +3,7 @@ import type { Route } from "../types/navigation";
 export const navItems: { label: string; href: Route }[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Services", href: "/our-services" },
+  { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -12,7 +12,8 @@ export function normalizePath(pathname: string): Route {
 
   if (normalizedPath === "/") return "/";
   if (normalizedPath === "/about") return "/about";
-  if (normalizedPath === "/our-services") return "/our-services";
+  if (normalizedPath === "/services") return "/services";
+  if (normalizedPath === "/our-services" || normalizedPath === "/our-solutions") return "/services";
   if (normalizedPath === "/contact") return "/contact";
   return "/";
 }
