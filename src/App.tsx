@@ -11,7 +11,7 @@ import type { NavigateOptions, Route } from "./types/navigation";
 const routeTitles: Record<Route, string> = {
   "/": "XAPN Ghana Limited | Industrial Services & Supplies",
   "/about": "About Us | XAPN Ghana Limited",
-  "/our-services": "Our Services | XAPN Ghana Limited",
+  "/services": "Services | XAPN Ghana Limited",
   "/contact": "Contact Us | XAPN Ghana Limited",
 };
 
@@ -116,7 +116,7 @@ function App() {
       <main>
         {route === "/" && <HomePage navigate={navigate} />}
         {route === "/about" && <AboutPage navigate={navigate} />}
-        {route === "/our-services" && <ServicesPage navigate={navigate} />}
+        {route === "/services" && <ServicesPage navigate={navigate} />}
         {route === "/contact" && <ContactPage />}
       </main>
       <Footer />
