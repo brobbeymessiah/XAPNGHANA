@@ -4,227 +4,123 @@ export type Service = {
   summary: string;
   image: string;
   items: string[];
-  showcaseItems: {
-    title: string;
-    image: string;
-  }[];
+  whyChoose: string;
 };
 
 export const services: Service[] = [
   {
-    id: "office-furniture",
-    title: "Office Furniture Services",
+    id: "anti-corrosion",
+    title: "Anti-Corrosion & Protective Coating Services",
     summary:
-      "Functional furniture for productive workspaces, executive offices, meeting rooms, and storage areas.",
-    image: "/assets/images/solution-furniture.jpg",
-    items: [
-      "Ergonomic office chairs",
-      "Executive and standard desks",
-      "Workstations and conference tables",
-      "Cabinets, shelving, and filing units",
-      "Reception and office support furniture",
-    ],
-    showcaseItems: [
-      {
-        title: "Ergonomic Office Chairs",
-        image: "/assets/images/furniture-ergonomic-chairs.jpg",
-      },
-      {
-        title: "Executive & Standard Desks",
-        image: "/assets/images/furniture-desks.jpg",
-      },
-      {
-        title: "Workstations & Conference Tables",
-        image: "/assets/images/furniture-workstations-conference.jpg",
-      },
-      {
-        title: "Cabinets, Shelving & Filing Units",
-        image: "/assets/images/furniture-cabinets-shelving.jpg",
-      },
-      {
-        title: "Reception & Office Support Furniture",
-        image: "/assets/images/furniture-reception-support.jpg",
-      },
-    ],
-  },
-  {
-    id: "tyres-batteries",
-    title: "Vehicle Tyres & Batteries",
-    summary:
-      "Reliable tyre and battery supply for company vehicles, fleet operations, and heavy-duty movement.",
-    image: "/assets/images/solution-tyres-batteries.jpg",
-    items: [
-      "Car tyres",
-      "Truck tyres",
-      "Heavy-duty and industrial tyres",
-      "Car batteries",
-      "Truck and fleet batteries",
-    ],
-    showcaseItems: [
-      {
-        title: "Car Tyres",
-        image: "/assets/images/tyres-car-tyres.jpg",
-      },
-      {
-        title: "Truck Tyres",
-        image: "/assets/images/tyres-truck-tyres.jpg",
-      },
-      {
-        title: "Heavy-duty & Industrial Tyres",
-        image: "/assets/images/tyres-heavy-duty-tyres.jpg",
-      },
-      {
-        title: "Car Batteries",
-        image: "/assets/images/tyres-car-batteries.jpg",
-      },
-      {
-        title: "Truck & Fleet Batteries",
-        image: "/assets/images/tyres-fleet-batteries.jpg",
-      },
-    ],
-  },
-  {
-    id: "spare-parts",
-    title: "Vehicle & Equipment Spare Parts",
-    summary:
-      "Essential parts that help teams reduce downtime and keep vehicles, machinery, and equipment working.",
-    image: "/assets/images/solution-spare-parts.jpg",
-    items: [
-      "Car spare parts",
-      "Truck spare parts",
-      "Heavy equipment parts",
-      "Filters, belts, and bearings",
-      "Electrical and maintenance parts",
-    ],
-    showcaseItems: [
-      {
-        title: "Car Spare Parts",
-        image: "/assets/images/spares-car-parts.jpg",
-      },
-      {
-        title: "Truck Spare Parts",
-        image: "/assets/images/spares-truck-parts.jpg",
-      },
-      {
-        title: "Heavy Equipment Parts",
-        image: "/assets/images/spares-heavy-equipment.jpg",
-      },
-      {
-        title: "Filters, Belts & Bearings",
-        image: "/assets/images/spares-filters-belts-bearings.jpg",
-      },
-      {
-        title: "Electrical & Maintenance Parts",
-        image: "/assets/images/spares-electrical-maintenance.jpg",
-      },
-    ],
-  },
-  {
-    id: "storage-pallets",
-    title: "Storage Devices & Pallets",
-    summary:
-      "Storage, handling, and warehouse organization products for safe movement and efficient operations.",
-    image: "/assets/images/solution-storage-pallets.jpg",
-    items: [
-      "Wooden pallets",
-      "Plastic pallets",
-      "Storage crates",
-      "Warehouse racks",
-      "Shelving systems and handling tools",
-    ],
-    showcaseItems: [
-      {
-        title: "Wooden Pallets",
-        image: "/assets/images/storage-wooden-pallets.jpg",
-      },
-      {
-        title: "Plastic Pallets",
-        image: "/assets/images/storage-plastic-pallets.jpg",
-      },
-      {
-        title: "Storage Crates",
-        image: "/assets/images/storage-crates.jpg",
-      },
-      {
-        title: "Warehouse Racks",
-        image: "/assets/images/storage-warehouse-racks.jpg",
-      },
-      {
-        title: "Shelving Systems & Handling Tools",
-        image: "/assets/images/storage-shelving-handling.jpg",
-      },
-    ],
-  },
-  {
-    id: "maintenance",
-    title: "Anti-Corrosion & Maintenance Services",
-    summary:
-      "Protective and maintenance support for equipment, infrastructure, and industrial assets.",
+      "Surface preparation and protective treatments that help extend the working life of industrial equipment, structures, and assets.",
     image: "/assets/images/solution-maintenance.jpg",
     items: [
+      "Sandblasting and surface preparation",
       "Anti-rust treatment",
+      "Industrial painting",
       "Protective coatings",
-      "Surface preparation",
-      "Maintenance tools and supplies",
-      "Industrial protection supplies",
+      "Corrosion-prevention maintenance",
     ],
-    showcaseItems: [
-      {
-        title: "Anti-rust Treatment",
-        image: "/assets/images/maintenance-anti-rust.jpg",
-      },
-      {
-        title: "Protective Coatings",
-        image: "/assets/images/maintenance-protective-coatings.jpg",
-      },
-      {
-        title: "Surface Preparation",
-        image: "/assets/images/maintenance-surface-prep.jpg",
-      },
-      {
-        title: "Maintenance Tools & Supplies",
-        image: "/assets/images/maintenance-tools-supplies.jpg",
-      },
-      {
-        title: "Industrial Protection Supplies",
-        image: "/assets/images/maintenance-protection-supplies.jpg",
-      },
-    ],
+    whyChoose:
+      "We combine careful surface preparation with fit-for-purpose protective treatments to help reduce premature deterioration and extend asset life.",
   },
   {
-    id: "general-supplies",
-    title: "General Industrial & Office Supplies",
+    id: "mining-input-supplies",
+    title: "Mining Input Supplies",
     summary:
-      "Flexible procurement support for day-to-day office, industrial, safety, and operational needs.",
-    image: "/assets/images/solution-general-supplies.jpg",
+      "Reliable procurement and delivery of essential inputs and consumables for mining operations across Ghana.",
+    image: "/assets/images/service-mining-inputs.jpg",
     items: [
-      "Office consumables",
-      "Industrial tools",
-      "Safety supplies",
-      "Cleaning and maintenance supplies",
-      "Operational support items",
+      "Grinding media and milling consumables",
+      "Process chemicals and grouting materials",
+      "PPE and general mine consumables",
+      "Pipes, conveyor rollers, cables, and sample bags",
+      "Lubricants, fuels, and oils",
+      "Blasting accessories, subject to regulatory requirements",
     ],
-    showcaseItems: [
-      {
-        title: "Office Consumables",
-        image: "/assets/images/general-office-consumables.jpg",
-      },
-      {
-        title: "Industrial Tools",
-        image: "/assets/images/general-industrial-tools.jpg",
-      },
-      {
-        title: "Safety Supplies",
-        image: "/assets/images/general-safety-supplies.jpg",
-      },
-      {
-        title: "Cleaning & Maintenance Supplies",
-        image: "/assets/images/general-cleaning-maintenance.jpg",
-      },
-      {
-        title: "Operational Support Items",
-        image: "/assets/images/general-operational-support.jpg",
-      },
+    whyChoose:
+      "We coordinate sourcing and delivery around your specifications, quantities, and operating schedule so essential inputs reach site when they are needed.",
+  },
+  {
+    id: "mining-support",
+    title: "Mining Support Services",
+    summary:
+      "Practical site, logistics, and procurement support designed to keep mining operations supplied, coordinated, and productive.",
+    image: "/assets/images/service-mining-support.jpg",
+    items: [
+      "Mine-site logistics and haulage support",
+      "On-site technical support and supervision",
+      "Procurement and vendor coordination",
+      "Materials handling",
+      "After-sales support and spare-parts management",
     ],
+    whyChoose:
+      "Our support is organized around site schedules, clear coordination, and operational continuity, helping teams respond efficiently to changing requirements.",
+  },
+  {
+    id: "engineering-mechanical",
+    title: "Industrial Engineering & Mechanical Services",
+    summary:
+      "Engineering, fabrication, installation, and maintenance support for industrial machinery, systems, and facility upgrades.",
+    image: "/assets/images/service-engineering-mechanical.jpg",
+    items: [
+      "Design, fabrication, welding, and metal works",
+      "Preventive and corrective machinery maintenance",
+      "Pump, conveyor, and valve servicing",
+      "Equipment overhaul and refurbishment",
+      "Industrial equipment installation and commissioning",
+      "Piping, process optimization, and project support",
+    ],
+    whyChoose:
+      "We bring fabrication, installation, and maintenance support together, giving clients a practical path from equipment needs through commissioning and ongoing care.",
+  },
+  {
+    id: "hvac-refrigeration",
+    title: "HVAC, Refrigeration & Cold-Room Services",
+    summary:
+      "Supply, installation, diagnostics, and maintenance for commercial and industrial cooling, refrigeration, and ventilation systems.",
+    image: "/assets/images/service-hvac-refrigeration.jpg",
+    items: [
+      "AC and VRV system supply, installation, and maintenance",
+      "Cold-room and freezer installation",
+      "Refrigerant charging and leak detection",
+      "Ducting, ventilation, and exhaust systems",
+      "Air-quality systems for plants and commercial kitchens",
+    ],
+    whyChoose:
+      "We support cooling and ventilation systems from supply and installation through diagnostics and maintenance, with solutions shaped around each facility's operating needs.",
+  },
+  {
+    id: "facility-management",
+    title: "Facility Management & General Maintenance",
+    summary:
+      "Coordinated cleaning, building maintenance, and minor works that support safe, functional, and well-maintained facilities.",
+    image: "/assets/images/service-facility-management.jpg",
+    items: [
+      "Janitorial and cleaning services",
+      "Routine non-hazardous waste handling",
+      "Plumbing and electrical maintenance",
+      "General building maintenance",
+      "Painting, tiling, and minor civil works",
+    ],
+    whyChoose:
+      "A coordinated service approach helps clients manage routine cleaning, repairs, and minor works through one dependable operational partner.",
+  },
+  {
+    id: "waste-recycling",
+    title: "Industrial Waste Management & Recycling",
+    summary:
+      "Responsible waste handling, material recovery, and environmental support for mining and industrial facilities.",
+    image: "/assets/images/service-waste-recycling.jpg",
+    items: [
+      "Industrial and hazardous-waste management",
+      "Scrap-metal recovery and recycling",
+      "Used-oil and lubricant management",
+      "Plastics, pallets, and packaging recycling",
+      "Environmental documentation",
+      "Site clean-up and remediation support",
+    ],
+    whyChoose:
+      "Our approach prioritizes organized segregation, controlled handling, clear documentation, and material recovery wherever practical.",
   },
 ];
