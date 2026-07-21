@@ -100,8 +100,8 @@ export function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Tell XAPN what your organization needs."
-        body="Send a product or service enquiry with quantity, delivery location and preferred contact details."
+        title="Tell XAPN what your operation needs."
+        body="Send a mining, industrial, or maintenance enquiry with the scope, site location, and preferred contact details."
       />
 
       <section className="section-pad bg-mist">
@@ -135,7 +135,7 @@ export function ContactPage() {
             <input type="hidden" name="_subject" value="New XAPN Ghana enquiry" />
             <div>
               <h2 className="mt-3 font-display text-2xl font-bold leading-tight sm:text-3xl">
-                Request pricing or availability
+                Request pricing or service support
               </h2>
             </div>
 
