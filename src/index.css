@@ -75,7 +75,7 @@ img {
   }
 
   to {
-    transform: scale(1.08);
+    transform: scale(1.035);
   }
 }
 
@@ -119,6 +119,16 @@ img {
   }
 
   .service-crawler-viewport::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-gallery-viewport {
+    overscroll-behavior-inline: contain;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .service-gallery-viewport::-webkit-scrollbar {
     display: none;
   }
 
