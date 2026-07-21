@@ -4,6 +4,10 @@ export type Service = {
   summary: string;
   image: string;
   items: string[];
+  gallery: {
+    title: string;
+    image: string;
+  }[];
   whyChoose: string;
 };
 
@@ -20,6 +24,20 @@ export const services: Service[] = [
       "Industrial painting",
       "Protective coatings",
       "Corrosion-prevention maintenance",
+    ],
+    gallery: [
+      {
+        title: "Surface Preparation",
+        image: "/assets/images/maintenance-surface-prep.jpg",
+      },
+      {
+        title: "Anti-Rust Treatment",
+        image: "/assets/images/maintenance-anti-rust.jpg",
+      },
+      {
+        title: "Protective Coating Application",
+        image: "/assets/images/maintenance-protective-coatings.jpg",
+      },
     ],
     whyChoose:
       "We combine careful surface preparation with fit-for-purpose protective treatments to help reduce premature deterioration and extend asset life.",
@@ -38,6 +56,20 @@ export const services: Service[] = [
       "Lubricants, fuels, and oils",
       "Blasting accessories, subject to regulatory requirements",
     ],
+    gallery: [
+      {
+        title: "Grinding Media & Milling Consumables",
+        image: "/assets/images/gallery-mining-grinding-media.jpg",
+      },
+      {
+        title: "Process Chemicals & Grouting Materials",
+        image: "/assets/images/gallery-mining-process-materials.jpg",
+      },
+      {
+        title: "Mine Consumables & PPE",
+        image: "/assets/images/gallery-mining-consumables.jpg",
+      },
+    ],
     whyChoose:
       "We coordinate sourcing and delivery around your specifications, quantities, and operating schedule so essential inputs reach site when they are needed.",
   },
@@ -53,6 +85,20 @@ export const services: Service[] = [
       "Procurement and vendor coordination",
       "Materials handling",
       "After-sales support and spare-parts management",
+    ],
+    gallery: [
+      {
+        title: "Mine-Site Logistics & Haulage",
+        image: "/assets/images/gallery-support-logistics.jpg",
+      },
+      {
+        title: "On-Site Technical Support",
+        image: "/assets/images/gallery-support-supervision.jpg",
+      },
+      {
+        title: "Procurement & Vendor Coordination",
+        image: "/assets/images/gallery-support-procurement.jpg",
+      },
     ],
     whyChoose:
       "Our support is organized around site schedules, clear coordination, and operational continuity, helping teams respond efficiently to changing requirements.",
@@ -71,6 +117,20 @@ export const services: Service[] = [
       "Industrial equipment installation and commissioning",
       "Piping, process optimization, and project support",
     ],
+    gallery: [
+      {
+        title: "Fabrication & Welding",
+        image: "/assets/images/gallery-engineering-fabrication.jpg",
+      },
+      {
+        title: "Pump & Valve Servicing",
+        image: "/assets/images/gallery-engineering-pump-service.jpg",
+      },
+      {
+        title: "Equipment Commissioning",
+        image: "/assets/images/gallery-engineering-commissioning.jpg",
+      },
+    ],
     whyChoose:
       "We bring fabrication, installation, and maintenance support together, giving clients a practical path from equipment needs through commissioning and ongoing care.",
   },
@@ -86,6 +146,20 @@ export const services: Service[] = [
       "Refrigerant charging and leak detection",
       "Ducting, ventilation, and exhaust systems",
       "Air-quality systems for plants and commercial kitchens",
+    ],
+    gallery: [
+      {
+        title: "AC & VRV System Servicing",
+        image: "/assets/images/gallery-hvac-vrv-service.jpg",
+      },
+      {
+        title: "Cold-Room Installation",
+        image: "/assets/images/gallery-hvac-cold-room.jpg",
+      },
+      {
+        title: "Ventilation & Exhaust Systems",
+        image: "/assets/images/gallery-hvac-ventilation.jpg",
+      },
     ],
     whyChoose:
       "We support cooling and ventilation systems from supply and installation through diagnostics and maintenance, with solutions shaped around each facility's operating needs.",
@@ -103,6 +177,20 @@ export const services: Service[] = [
       "General building maintenance",
       "Painting, tiling, and minor civil works",
     ],
+    gallery: [
+      {
+        title: "Janitorial & Industrial Cleaning",
+        image: "/assets/images/gallery-facility-cleaning.jpg",
+      },
+      {
+        title: "Plumbing & Electrical Maintenance",
+        image: "/assets/images/gallery-facility-maintenance.jpg",
+      },
+      {
+        title: "Painting, Tiling & Minor Works",
+        image: "/assets/images/gallery-facility-minor-works.jpg",
+      },
+    ],
     whyChoose:
       "A coordinated service approach helps clients manage routine cleaning, repairs, and minor works through one dependable operational partner.",
   },
@@ -119,6 +207,20 @@ export const services: Service[] = [
       "Plastics, pallets, and packaging recycling",
       "Environmental documentation",
       "Site clean-up and remediation support",
+    ],
+    gallery: [
+      {
+        title: "Controlled Industrial Waste Handling",
+        image: "/assets/images/gallery-waste-controlled-handling.jpg",
+      },
+      {
+        title: "Scrap-Metal Recovery",
+        image: "/assets/images/gallery-waste-scrap-recovery.jpg",
+      },
+      {
+        title: "Oil, Plastics & Pallet Recycling",
+        image: "/assets/images/gallery-waste-material-recycling.jpg",
+      },
     ],
     whyChoose:
       "Our approach prioritizes organized segregation, controlled handling, clear documentation, and material recovery wherever practical.",
