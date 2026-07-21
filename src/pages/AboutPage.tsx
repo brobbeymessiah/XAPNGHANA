@@ -8,8 +8,8 @@ import type { Navigate } from "../types/navigation";
 const values = [
   ["Reliability", "Consistent response and timely supply support."],
   ["Quality Assurance", "Products sourced with care from trusted channels."],
-  ["Customer Focus", "Services shaped around each client's operational needs."],
-  ["Operational Understanding", "A practical view of downtime, delivery, and business continuity."],
+  ["Safety & Compliance", "Responsible support shaped around site and operational requirements."],
+  ["Operational Understanding", "A practical view of uptime, delivery, safety, and continuity."],
 ];
 
 export function AboutPage({ navigate }: { navigate: Navigate }) {
@@ -17,8 +17,8 @@ export function AboutPage({ navigate }: { navigate: Navigate }) {
     <>
       <PageHero
         eyebrow="About Us"
-        title="A dependable supply partner for organizations and industries across Ghana."
-        body="XAPN Ghana Limited is built to help businesses operate smoothly through reliable sourcing, quality products, and practical operational support."
+        title="A dependable partner for mining and industrial operations across Ghana."
+        body="XAPN Ghana Limited supports mining companies, production facilities, and commercial organizations through reliable sourcing, technical services, and practical operational support."
       />
 
       <section className="section-pad bg-white">
@@ -27,20 +27,20 @@ export function AboutPage({ navigate }: { navigate: Navigate }) {
             <div>
               <p className="eyebrow">Company Overview</p>
               <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-4xl">
-                Industrial, office, vehicle, storage, and maintenance services under one roof.
+                Mining supplies, engineering, maintenance, and operational support under one roof.
               </h2>
             </div>
           </Reveal>
           <Reveal direction="up">
             <div className="space-y-5 text-base leading-8 text-black/75">
               <p>
-                XAPN Ghana Limited is a dynamic services provider dedicated to
-                supporting organizations and industries across Ghana. The company focuses on
-                quality, efficiency, and customer satisfaction.
+                XAPN Ghana Limited delivers integrated solutions that support mining,
+                industrial, and commercial operations across Ghana. The company focuses on
+                quality, safety, timely delivery, and dependable service.
               </p>
               <p>
-                The goal is simple: become the preferred partner for companies seeking
-                dependable supply services, operational support, and long-lasting value.
+                Our goal is to help clients maintain operational continuity through responsive
+                procurement, engineering, maintenance, and site-support capabilities.
               </p>
             </div>
           </Reveal>
@@ -68,8 +68,8 @@ export function AboutPage({ navigate }: { navigate: Navigate }) {
         <div className="container-x">
           <SectionHeading
             eyebrow="Core Values"
-            title="The standards behind every supply relationship."
-            body="The site presents XAPN as practical, dependable, and built for repeat business relationships."
+            title="The standards behind every client relationship."
+            body="Practical service, responsible delivery, and long-term value guide how XAPN supports every operation."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {values.map(([title, body]) => (
