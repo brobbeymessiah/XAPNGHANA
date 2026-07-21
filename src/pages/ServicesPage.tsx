@@ -79,7 +79,8 @@ export function ServicesPage({ navigate }: { navigate: Navigate }) {
     <>
       <PageHero
         eyebrow="Our Services"
-        title="Products and services for every aspect of your operations."
+        title="Integrated support for mining and industrial operations."
+        body="From essential mining inputs to engineering, facility maintenance, and environmental support, XAPN helps clients keep critical operations moving."
       />
 
       <section className="overflow-x-hidden border-b border-ink/10 bg-white py-8">
@@ -130,12 +131,12 @@ export function ServicesPage({ navigate }: { navigate: Navigate }) {
                   <Reveal
                     direction={imageDirection}
                     duration={0.9}
-                    className={`aspect-[4/3] overflow-hidden sm:aspect-[16/10] lg:aspect-auto lg:min-h-80 ${index % 2 ? "lg:order-2" : ""}`}
+                    className={`relative aspect-[16/10] self-start overflow-hidden bg-ink/5 lg:my-8 ${index % 2 ? "lg:order-2" : ""}`}
                   >
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="h-full w-full object-cover transition duration-700 hover:scale-110"
+                      className="h-full w-full object-cover object-center transition duration-700 hover:scale-105"
                     />
                   </Reveal>
 
@@ -158,6 +159,12 @@ export function ServicesPage({ navigate }: { navigate: Navigate }) {
                             <span>{item}</span>
                           </div>
                         ))}
+                      </div>
+                      <div className="mt-7 rounded-md border-l-4 border-brand bg-brand/10 px-5 py-4">
+                        <p className="text-xs font-black uppercase tracking-[0.16em] text-brand-dark">
+                          Why Choose XAPN
+                        </p>
+                        <p className="mt-2 text-sm leading-7 text-ink/75">{service.whyChoose}</p>
                       </div>
                       <AppLink navigate={navigate} href="/contact" className="button-outline mt-7">
                         Request Quote <ArrowRight size={17} />
