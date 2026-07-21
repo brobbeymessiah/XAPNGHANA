@@ -2,7 +2,12 @@
   "redirects": [
     {
       "source": "/our-solutions",
-      "destination": "/our-services",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/our-services",
+      "destination": "/services",
       "permanent": true
     }
   ],
