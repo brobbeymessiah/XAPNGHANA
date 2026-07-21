@@ -21,7 +21,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
   const mobileServicesRef = useRef<HTMLDivElement>(null);
   const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
   const mobileNavigationRef = useRef<HTMLDivElement>(null);
-  const isServicesActive = route === "/our-services";
+  const isServicesActive = route === "/services";
   const isDesktopServicesHighlighted = isServicesActive || desktopServicesOpen;
   const isMobileServicesHighlighted = isServicesActive || mobileServicesOpen;
   const activeService =
@@ -159,7 +159,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
 
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
             {navItems.map((item) =>
-              item.href === "/our-services" ? (
+              item.href === "/services" ? (
                 <div
                   key={item.href}
                   ref={desktopServicesRef}
@@ -198,7 +198,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                         <p className="text-sm font-black uppercase text-ink">Services</p>
                         <AppLink
                           navigate={navigate}
-                          href="/our-services"
+                          href="/services"
                           onNavigate={closeServicesForNavigation}
                           className="inline-flex items-center gap-1 text-sm font-bold text-brand-dark transition hover:text-ink"
                         >
@@ -232,7 +232,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                             <h3 className="text-base font-black text-ink">{activeService.title}</h3>
                             <AppLink
                               navigate={navigate}
-                              href="/our-services"
+                              href="/services"
                               hash={activeService.id}
                               onNavigate={closeServicesForNavigation}
                               className="shrink-0 text-sm font-bold text-brand-dark transition hover:text-ink"
@@ -241,27 +241,31 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                             </AppLink>
                           </div>
 
-                          <div className="grid grid-cols-5 gap-3" role="menu">
-                            {activeService.showcaseItems.map((item) => (
-                              <AppLink
-                                key={item.title}
-                                navigate={navigate}
-                                href="/our-services"
-                                hash={activeService.id}
-                                onNavigate={closeServicesForNavigation}
-                                role="menuitem"
-                                className="group min-w-0 overflow-hidden rounded-md border border-ink/10 bg-white text-left transition hover:border-brand hover:shadow-sm"
-                              >
-                                <img
-                                  src={item.image}
-                                  alt={item.title}
-                                  className="h-28 w-full object-cover transition duration-500 group-hover:scale-105"
-                                />
-                                <span className="block min-h-12 px-2 py-2 text-xs font-bold leading-4 text-ink">
-                                  {item.title}
-                                </span>
-                              </AppLink>
-                            ))}
+                          <div className="grid gap-4 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+                            <AppLink
+                              navigate={navigate}
+                              href="/services"
+                              hash={activeService.id}
+                              onNavigate={closeServicesForNavigation}
+                              className="group overflow-hidden rounded-md border border-ink/10 bg-mist"
+                            >
+                              <img
+                                src={activeService.image}
+                                alt={activeService.title}
+                                className="aspect-[16/10] w-full object-cover object-center transition duration-500 group-hover:scale-105"
+                              />
+                            </AppLink>
+                            <div className="min-w-0">
+                              <p className="text-sm leading-6 text-ink/70">{activeService.summary}</p>
+                              <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                                {activeService.items.slice(0, 6).map((item) => (
+                                  <li key={item} className="flex gap-2 text-xs font-bold leading-5 text-ink">
+                                    <ChevronRight size={14} className="mt-0.5 shrink-0 text-brand-dark" />
+                                    <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -315,12 +319,12 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
             >
               <nav id="mobile-navigation-dropdown" className="flex flex-col gap-2" aria-label="Mobile navigation">
                 {navItems.map((item) =>
-                  item.href === "/our-services" ? (
+                  item.href === "/services" ? (
                     <div key={item.href} ref={mobileServicesRef} className="rounded-md bg-brand/5 p-1">
                       <div className="flex items-center gap-1">
                         <AppLink
                           navigate={navigate}
-                          href="/our-services"
+                          href="/services"
                           onNavigate={closeServicesForNavigation}
                           aria-current={isServicesActive ? "page" : undefined}
                           className={`min-w-0 flex-1 rounded-md px-3 py-3 text-left text-sm font-bold transition ${
@@ -348,7 +352,7 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                         <div id="mobile-services-preview" className="grid gap-2 px-1 pb-1 pt-2">
                           <AppLink
                             navigate={navigate}
-                            href="/our-services"
+                            href="/services"
                             onNavigate={closeServicesForNavigation}
                             className="rounded-md px-3 py-2 text-left text-sm font-bold text-ink transition hover:bg-white"
                           >
@@ -373,26 +377,24 @@ export function Header({ route, menuOpen, setMenuOpen, navigate }: HeaderProps) 
                                 </button>
 
                                 {isOpen && (
-                                  <div className="grid grid-cols-2 gap-2 border-t border-ink/10 bg-mist/50 p-2">
-                                    {service.showcaseItems.map((showcaseItem) => (
-                                      <AppLink
-                                        key={showcaseItem.title}
-                                        navigate={navigate}
-                                        href="/our-services"
-                                        hash={service.id}
-                                        onNavigate={closeServicesForNavigation}
-                                        className="overflow-hidden rounded-md bg-white text-left shadow-sm"
-                                      >
-                                        <img
-                                          src={showcaseItem.image}
-                                          alt={showcaseItem.title}
-                                          className="h-24 w-full object-cover"
-                                        />
-                                        <span className="block px-2 py-2 text-xs font-bold leading-4 text-ink">
-                                          {showcaseItem.title}
-                                        </span>
-                                      </AppLink>
-                                    ))}
+                                  <div className="border-t border-ink/10 bg-mist/50 p-2">
+                                    <img
+                                      src={service.image}
+                                      alt={service.title}
+                                      className="aspect-[16/10] w-full rounded-md object-cover object-center"
+                                    />
+                                    <p className="px-1 pt-3 text-xs leading-5 text-ink/70">
+                                      {service.summary}
+                                    </p>
+                                    <AppLink
+                                      navigate={navigate}
+                                      href="/services"
+                                      hash={service.id}
+                                      onNavigate={closeServicesForNavigation}
+                                      className="mt-2 inline-flex items-center gap-1 rounded-md px-1 py-2 text-xs font-black text-brand-dark"
+                                    >
+                                      View service <ChevronRight size={14} />
+                                    </AppLink>
                                   </div>
                                 )}
                               </div>
