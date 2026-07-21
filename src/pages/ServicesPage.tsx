@@ -184,6 +184,32 @@ export function ServicesPage({ navigate }: { navigate: Navigate }) {
                           </div>
                         ))}
                       </div>
+                      <div className="mt-7">
+                        <p className="text-xs font-black uppercase tracking-[0.16em] text-brand-dark">
+                          Service Gallery
+                        </p>
+                        <div className="service-gallery-viewport -mx-1 mt-3 flex snap-x snap-mandatory gap-3 overflow-x-auto px-1 pb-2 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:pb-0">
+                          {service.gallery.map((galleryItem) => (
+                            <figure
+                              key={galleryItem.title}
+                              className="group w-[82%] shrink-0 snap-start overflow-hidden rounded-md border border-ink/10 bg-white sm:w-auto"
+                            >
+                              <div className="aspect-[16/10] overflow-hidden bg-ink/5">
+                                <img
+                                  src={galleryItem.image}
+                                  alt={`${galleryItem.title} for ${service.title}`}
+                                  loading="lazy"
+                                  decoding="async"
+                                  className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-105"
+                                />
+                              </div>
+                              <figcaption className="px-3 py-2 text-xs font-bold leading-5 text-ink">
+                                {galleryItem.title}
+                              </figcaption>
+                            </figure>
+                          ))}
+                        </div>
+                      </div>
                       <div className="mt-7 rounded-md border-l-4 border-brand bg-brand/10 px-5 py-4">
                         <p className="text-xs font-black uppercase tracking-[0.16em] text-brand-dark">
                           Why Choose XAPN
