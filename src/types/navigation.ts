@@ -1,4 +1,4 @@
-export type Route = "/" | "/about" | "/our-services" | "/contact";
+export type Route = "/" | "/about" | "/services" | "/contact";
 
 export type NavigateOptions = {
   hash?: string;
