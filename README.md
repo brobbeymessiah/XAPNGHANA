@@ -31,10 +31,10 @@ The local site normally runs at `http://localhost:5173`.
 | --- | --- |
 | `/` | Homepage |
 | `/about` | About XAPN Ghana |
-| `/our-services` | Services and service categories |
+| `/services` | Services and service categories |
 | `/contact` | Contact details and enquiry form |
 
-The legacy `/our-solutions` path redirects to `/our-services` on Vercel.
+The legacy `/our-services` and `/our-solutions` paths redirect to `/services` on Vercel.
 
 ## Key files
 
@@ -49,7 +49,7 @@ The legacy `/our-solutions` path redirects to `/our-services` on Vercel.
 | `index.html` | Page and social-sharing metadata |
 | `vercel.json` | Production redirects and SPA rewrites |
 
-Service IDs in `src/data/services.ts` are used for direct links such as `/our-services#office-furniture`; keep them unique and URL-safe.
+Service IDs in `src/data/services.ts` are used for direct links such as `/services#anti-corrosion`; keep them unique and URL-safe.
 
 ## Contact form
 
