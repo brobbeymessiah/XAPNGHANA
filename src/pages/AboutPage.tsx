@@ -18,29 +18,28 @@ export function AboutPage({ navigate }: { navigate: Navigate }) {
       <PageHero
         eyebrow="About Us"
         title="A dependable partner for industrial and mining operations across Ghana."
-        body="XAPN Ghana Limited supports industry,production facility, commercial operation and mining companies, production facilities, and commercial organizations through reliable sourcing, technical services, and practical operational support."
+        body="XAPN Ghana Limited supports industry,production facilities,commercial operations and mining companies with reliable  product sourcing, expert technical services,and practical operational support."
       />
 
       <section className="section-pad bg-white">
-        <div className="container-x grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-start">
+        <div className="container-x">
           <Reveal direction="up">
             <div>
-              <p className="eyebrow">Company Overview</p>
-              <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-4xl">
-                Industrial and mining supplies, engineering, maintenance, and operational support under one roof.
+              <h2 className="font-display text-3xl font-bold leading-tight sm:text-4xl">
+                Company Overview
               </h2>
             </div>
           </Reveal>
           <Reveal direction="up">
-            <div className="space-y-5 text-base leading-8 text-black/75">
+            <div className="mt-6 max-w-4xl space-y-5 text-base leading-8 text-black/75">
               <p>
-                XAPN Ghana Limited delivers integrated solutions that support industry supplies,
-                commercial and mining operations across Ghana. The company focuses on
-                quality, safety, timely delivery, and dependable service.
+                XAPN Ghana Limited provides integrated solutions for industry, mining, and
+                commercial operations.
               </p>
               <p>
-                Our goal is to help clients maintain operational continuity through responsive
-                procurement, engineering, maintenance, and site-support capabilities.
+                We combine reliable product supply with engineering, maintenance, and operational
+                support services to deliver continuity, safety, and performance for our clients
+                across Ghana.
               </p>
             </div>
           </Reveal>
