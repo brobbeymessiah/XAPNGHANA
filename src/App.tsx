@@ -5,6 +5,7 @@ import { normalizePath } from "./data/navigation";
 import { AboutPage } from "./pages/AboutPage";
 import { ContactPage } from "./pages/ContactPage";
 import { HomePage } from "./pages/HomePage";
+import { ProductsPage } from "./pages/ProductsPage";
 import { ServicesPage } from "./pages/ServicesPage";
 import type { NavigateOptions, Route } from "./types/navigation";
 
@@ -12,6 +13,7 @@ const routeTitles: Record<Route, string> = {
   "/": "XAPN Ghana Limited | Industrial Services & Supplies",
   "/about": "About Us | XAPN Ghana Limited",
   "/services": "Services | XAPN Ghana Limited",
+  "/products": "Products | XAPN Ghana Limited",
   "/contact": "Contact Us | XAPN Ghana Limited",
 };
 
@@ -117,6 +119,7 @@ function App() {
         {route === "/" && <HomePage navigate={navigate} />}
         {route === "/about" && <AboutPage navigate={navigate} />}
         {route === "/services" && <ServicesPage navigate={navigate} />}
+        {route === "/products" && <ProductsPage navigate={navigate} />}
         {route === "/contact" && <ContactPage />}
       </main>
       <Footer />
