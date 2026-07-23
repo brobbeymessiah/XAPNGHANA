@@ -156,42 +156,6 @@ export const productCategories: ProductCategory[] = [
     ],
   },
   {
-    id: "maintenance",
-    title: "Anti-Corrosion & Maintenance",
-    summary:
-      "Protective and maintenance support for equipment, infrastructure, and industrial assets.",
-    image: "/assets/images/solution-maintenance.jpg",
-    items: [
-      "Anti-rust treatment",
-      "Protective coatings",
-      "Surface preparation",
-      "Maintenance tools and supplies",
-      "Industrial protection supplies",
-    ],
-    showcaseItems: [
-      {
-        title: "Anti-Rust Treatment",
-        image: "/assets/images/maintenance-anti-rust.jpg",
-      },
-      {
-        title: "Protective Coatings",
-        image: "/assets/images/maintenance-protective-coatings.jpg",
-      },
-      {
-        title: "Surface Preparation",
-        image: "/assets/images/maintenance-surface-prep.jpg",
-      },
-      {
-        title: "Maintenance Tools & Supplies",
-        image: "/assets/images/maintenance-tools-supplies.jpg",
-      },
-      {
-        title: "Industrial Protection Supplies",
-        image: "/assets/images/maintenance-protection-supplies.jpg",
-      },
-    ],
-  },
-  {
     id: "general-supplies",
     title: "General Industrial & Office Supplies",
     summary:
