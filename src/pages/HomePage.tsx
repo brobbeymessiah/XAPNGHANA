@@ -107,9 +107,13 @@ export function HomePage({ navigate }: { navigate: Navigate }) {
                         navigate={navigate}
                         href="/products"
                         hash={product.id}
-                        className="button-outline"
+                        className="group inline-flex items-center gap-2 text-sm font-bold text-brand-dark underline-offset-4 transition hover:text-ink hover:underline focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2"
                       >
-                        View Details<ArrowRight size={16} />
+                        View Details
+                        <ArrowRight
+                          size={16}
+                          className="transition-transform group-hover:translate-x-1"
+                        />
                       </AppLink>
                     </div>
                   </div>
