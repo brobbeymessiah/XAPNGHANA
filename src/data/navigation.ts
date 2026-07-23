@@ -4,6 +4,7 @@ export const navItems: { label: string; href: Route }[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Products", href: "/products" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -14,6 +15,7 @@ export function normalizePath(pathname: string): Route {
   if (normalizedPath === "/about") return "/about";
   if (normalizedPath === "/services") return "/services";
   if (normalizedPath === "/our-services" || normalizedPath === "/our-solutions") return "/services";
+  if (normalizedPath === "/products") return "/products";
   if (normalizedPath === "/contact") return "/contact";
   return "/";
 }
