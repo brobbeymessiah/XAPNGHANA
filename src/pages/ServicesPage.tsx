@@ -216,8 +216,16 @@ export function ServicesPage({ navigate }: { navigate: Navigate }) {
                         </p>
                         <p className="mt-2 text-sm leading-7 text-ink/75">{service.whyChoose}</p>
                       </div>
-                      <AppLink navigate={navigate} href="/contact" className="button-outline mt-7">
-                        Request Quote <ArrowRight size={17} />
+                      <AppLink
+                        navigate={navigate}
+                        href="/contact"
+                        className="group mt-7 inline-flex items-center gap-2 text-sm font-bold text-brand-dark underline-offset-4 transition hover:text-ink hover:underline focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2"
+                      >
+                        Request Quote
+                        <ArrowRight
+                          size={17}
+                          className="transition-transform group-hover:translate-x-1"
+                        />
                       </AppLink>
                     </div>
                   </Reveal>
