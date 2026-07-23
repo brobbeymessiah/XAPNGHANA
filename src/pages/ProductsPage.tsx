@@ -84,9 +84,13 @@ export function ProductsPage({ navigate }: { navigate: Navigate }) {
                     <AppLink
                       navigate={navigate}
                       href="/contact"
-                      className="button-outline mt-7 self-start"
+                      className="group mt-7 inline-flex items-center gap-2 self-start text-sm font-bold text-brand-dark underline-offset-4 transition hover:text-ink hover:underline focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2"
                     >
-                      Request Quote <ArrowRight size={17} />
+                      Request Quote
+                      <ArrowRight
+                        size={17}
+                        className="transition-transform group-hover:translate-x-1"
+                      />
                     </AppLink>
                   </div>
                 </Reveal>
