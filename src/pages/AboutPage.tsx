@@ -25,7 +25,7 @@ export function AboutPage({ navigate }: { navigate: Navigate }) {
         <div className="container-x grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-start">
           <Reveal direction="up">
             <div>
-              <h2 className="font-display text-3xl font-bold leading-tight sm:text-4xl">
+              <h2 className="font-display text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
                 Company Overview
               </h2>
             </div>
