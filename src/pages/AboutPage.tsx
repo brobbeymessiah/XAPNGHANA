@@ -18,11 +18,11 @@ export function AboutPage({ navigate }: { navigate: Navigate }) {
       <PageHero
         eyebrow="About Us"
         title="A dependable partner for industrial and mining operations across Ghana."
-        body="XAPN Ghana Limited supports industry,production facilities,commercial operations and mining companies with reliable  product sourcing, expert technical services,and practical operational support."
+        body="XAPN Ghana Limited supports industry, production facilities, commercial operations and mining companies with reliable  product sourcing, expert technical services,and practical operational support."
       />
 
       <section className="section-pad bg-white">
-        <div className="container-x">
+        <div className="container-x grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-start">
           <Reveal direction="up">
             <div>
               <h2 className="font-display text-3xl font-bold leading-tight sm:text-4xl">
@@ -31,7 +31,7 @@ export function AboutPage({ navigate }: { navigate: Navigate }) {
             </div>
           </Reveal>
           <Reveal direction="up">
-            <div className="mt-6 max-w-4xl space-y-5 text-base leading-8 text-black/75">
+            <div className="space-y-5 text-base leading-8 text-black/75">
               <p>
                 XAPN Ghana Limited provides integrated solutions for industry, mining, and
                 commercial operations.
